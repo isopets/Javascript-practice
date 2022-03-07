@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>写真の一覧</h1>
+<p>以下のボタンをクリックすると、写真が一覧表示されます。</p>
+<div id="photos">
+	<button onclick="showPhotos()">写真を表示</button>
+</div>
+<script>
+function showPhotos(){
+	let photoBox = document.getElementById('Photos');
+	photoBox.insertAdjacentHTML('afterbegin','<img src="photo_8.jpg">');
+	photoBox.insertAdjacentHTML('afterbegin','<img src="photo_7.jpg">');
+	photoBox.insertAdjacentHTML('afterbegin','<img src="photo_6.jpg">');
+	photoBox.insertAdjacentHTML('afterbegin','<img src="photo_5.jpg">');
+	photoBox.insertAdjacentHTML('afterbegin','<img src="photo_4.jpg">');
+	photoBox.insertAdjacentHTML('afterbegin','<img src="photo_3.jpg">');
+	photoBox.insertAdjacentHTML('afterbegin','<img src="photo_2.jpg">');
+	photoBox.insertAdjacentHTML('afterbegin','<img src="photo_1.jpg">');
+	}
+</script>
+</body>
+
+</html>

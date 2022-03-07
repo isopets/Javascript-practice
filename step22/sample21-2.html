@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>スタイルの変更</title>
+<style>
+	body {
+	width: 668px;
+	margin: 0px auto;
+	}
+	#photo_list {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	background-color: #333333;
+	}
+	#photo_list img {
+	opacity: 0.4;
+	border: solid 2px #333333;
+	padding: 4px;
+	}
+</style>
+</head>
+
+<body>
+<h1>PHOTO ALUBUM</h1>
+<div id="photo_list">
+	<img src="pic01.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+	<img src="pic02.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+	<img src="pic03.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+	<img src="pic04.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+	<img src="pic05.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+	<img src="pic06.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+	<img src="pic07.jpg" onmouseover="mOver(this)" onmouseout="mOut(this)">
+</div>
+<script>
+function mOver(obj){
+	obj.style.opacity = 1.0;
+	obj.style.border = 'solid 2px #FF9933';
+	}
+function mOut(obj){
+	obj.style.opacity = 0.4;
+	obj.style.border = 'solid 2px #333333';
+	}
+</script>
+</body>
+
+</html>"

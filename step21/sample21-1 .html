@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>スタイルの変更</title>
+<style>
+	body {
+	width: 650px;
+	margin: 0px auto;
+	background-color: #FFFFEE;
+	line-height: 2.0;
+	text-align: justify;
+	}
+	</style>
+</head>
+
+<body>
+<h1>リンク集</h1>
+<ul id ="links">
+	<li><a href="https://www.google.com/">Google</a></li>
+	<li><a href="https://www.yahoo.co.jp/">Yahoo!</a></li>
+	<li><a href="https://www.bing.com/">Bing</a></li>
+</ul>
+<button onlcick="showSNS()">SNSのリンク集へ</button>
+
+<script>
+let siteName = ['Facebook', 'Twitter', 'Instagram'];
+let siteURL = [];
+siteURL[0] = 'hthps://www.facebook.com/'
+siteURL[1] = 'https://twitter.com/'
+siteURL[2] = 'https://instagram.com/'
+
+function showSNS(){
+let listA = document.querySelectorAll('#links li a');
+for (let i = 0; i < listA.length; i++) {
+	listA[i].textContent = siteName[i];
+	listA[i].setAttribute('href', siteURL[i]);
+	}
+}	
+</script>
+</body>
+
+</html>

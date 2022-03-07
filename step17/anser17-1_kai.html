@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>関数の戻り値</title>
+<style>
+  #message {
+    width: 250px;
+    padding: 15px;
+    margin: 25px 0px;
+    background-color: #FFCC99;
+  }
+</style>
+</head>
+
+<body>
+<h1>1～10で割り切れる数字</h1>
+<p>1、2、3、4、5、6、7、8、9、10で<br>
+割り切れる最小の数値をJavaScriptで求めます。</p>
+<button onclick="show()">結果を見る</button>
+<div id="message">ここに結果が表示されます。</div>
+
+<script>
+function show() {
+  for (let i = 1; i <= 10000; i++) {
+//  let flag = check(i);
+    let flag = check2(i);
+    if (flag) {
+      document.getElementById('message').textContent = '答えは' + i + 'です。';
+      break;
+    }
+  }
+}
+
+// ----------- 割り切れるかをチェックする関数 -----------
+function check(num) {
+  let count = 0;
+  for (let j = 1; j <= 10; j++) {
+    if (num % j == 0) {
+      count++;
+    }
+  }
+  if (count == 10) {
+    return true;
+  } else {
+    return false;
+  }
+}
+// ------------------------------------------------------
+// ----------- 割り切れるかをチェックする関数(2) -----------
+function check2(num) {
+  for (let j = 1; j <= 10; j++) {
+    if (num % j != 0) {
+      return false;
+    }
+  }
+  return true;
+}
+// ------------------------------------------------------
+</script>
+
+</body>
+
+</html>
