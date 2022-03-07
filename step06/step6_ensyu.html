@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+<h2>変数の演算</h2>
+<p>a=10、B=4の場合</p>
+<div id="message">ここに解答が表示されます。</div
+<button onclick = "add();">足し算</button>
+<button onclick = "subtract();">ひき算</button>
+<button onclick = "multiply();">かけ算</button>
+<button onclick = "divide();">わり算</button>
+<script>
+	let a = 10;
+	let b = 4;
+	
+function add() {
+	let answer = a+b;
+	alert(answer);
+	}
+function subtract() {
+	let answer = a-b;
+		alert(answer);
+}
+function multiply() {
+	let answer = a*b;
+	alert(answer);
+	}	
+function divide() {
+	let answer = a/b;
+	alert(answer);
+	}
+
+function showAnswer(){
+	let answerBox = document.getElementById('message');
+	answerBox.textContent = answer;
+	console.log(answerBox);
+	}
+</script>
+
+</body>
+
+</html>

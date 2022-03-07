@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>配列の使い方</title>
+</head>
+
+<body>
+<h1>配列データの表示</h1>
+<p>ボタンをクリックすると、価格が表示されます。</p>
+<button onclick="test01();">表示</button>
+<button onclick="test02();">代入</button>
+<button onclick="test03();">追加</button>
+<script>
+let member = [];
+member[0] = '佐藤';
+member[1] = '田中';
+member[4] = '伊藤';
+
+function test01() {
+  alert('中身は' + member[2,3] + 'です');
+}
+function test02() {
+ member[2] = 'hoge';
+ member[3] = 'hogehoge';
+  alert('中身は' + member[2] + 'です');
+}
+function test03() {
+member[6] = 'fizz';
+member[7] = 'buzz';
+ alert('中身は' + member[6] + member[7] + 'です');
+}
+</script>
+</body>
+
+</html>
